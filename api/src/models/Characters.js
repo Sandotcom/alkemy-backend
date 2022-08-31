@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize"
 import { sequelize } from "../db.js"
 
-const Actors = sequelize.define('actors', {
+const Characters = sequelize.define('characters', {
   image: {
     type: DataTypes.STRING,
     allowNull: false
@@ -18,4 +18,4 @@ const Actors = sequelize.define('actors', {
   history: DataTypes.STRING,
 }, { timestamps: false })
 
-export default Actors
+export default Characters

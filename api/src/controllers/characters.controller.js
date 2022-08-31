@@ -1,4 +1,7 @@
+import Characters from '../models/Characters.js'
+
 export const getCharacters = async(req, res) => {
+
   res.status(200).send('Get characters')
 }
 

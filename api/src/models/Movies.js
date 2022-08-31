@@ -1,6 +1,6 @@
 import { DataTypes } from "sequelize"
 import { sequelize } from "../db.js"
-import Actors from "./Actors.js"
+import Characters from "./Characters.js"
 import Genres from "./Genres.js"
 
 const Movies = sequelize.define('movies', {
@@ -22,8 +22,8 @@ const Movies = sequelize.define('movies', {
   }
 }, { timestamps: false })
 
-Movies.belongsToMany(Actors, { through: 'MovieActors' })
-Actors.belongsToMany(Movies, { through: 'MovieActors' })
+Movies.belongsToMany(Characters, { through: 'MovieCharacters' })
+Characters.belongsToMany(Movies, { through: 'MovieCharacters' })
 
 Movies.belongsToMany(Genres, { through: 'MovieGenres' })
 Genres.belongsToMany(Movies, { through: 'MovieGenres' })
